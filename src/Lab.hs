@@ -18,7 +18,7 @@ import Prelude hiding ( elem, maximum, intersperse, transpose
 -- Recursive and higher-order functions
 
 elem :: Eq a => a -> [a] -> Bool
-elem x (y:ys) = not (null (filter (== x) ys))
+elem x ys = not (null (filter (== x) ys))
 
 elem' :: Eq a => a -> [a] -> Bool
 elem' x = foldr (\u v -> u == x || v) False
